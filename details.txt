@@ -1,0 +1,40 @@
+This file contains a few remarks specific to the program for Lab3.
+
+WebGL version: webgl2
+Libraries used: glmatrix
+
+For modularity, the program is composed of the following javascript files according to functionality:
+	- lab3_main.js (main file)
+	- object_loader.js (reads and parses object files)
+	- object.js
+		- cube.js
+		- rectangle.js
+		- sphere.js
+		- importedObject.js (creates objects from imported, parsed values)
+	- global.js
+	- shader_handler.js
+	- animation.js
+	- holder.js (top 2 cuboid "sticks" holding the hanging sculpture)
+	- threads.js (lines that simulate threads) 
+	- sculpture.js (generates all objects, assigns them to levels, arranges them and 
+			builds parent-child relationships)
+Obj files: 
+	- teapot.obj
+	- teddy.obj
+
+Supported by: Mozilla Firefox, Google Chrome
+
+Not supported by: Internet Explorer, Microsoft Edge
+
+About the application:
+	- Requirements are fulfilled
+		* sculpture of 10 shapes (combined primitives and imported objects)
+		* 4 levels of hierarchy (see attached screenshot)
+		* animation of at least 2 components from different hierarchy levels
+		* screenshot (also included in the submission directory as "Levels_identification_screenshot.png")
+	- Updates in Lab3:
+        	* illumination model used is now Phong's model only (the teapot has an added specular 
+			highlight to make it appear shiny), the light source is still at (0, 10, 0)
+		* no user interaction
+		* synchronous call to the server in the object_loader.js file --> make sure that the data
+			is completely loaded before it's accessed in the program
